@@ -2,7 +2,7 @@
 
 
 ## Paper Solution
-
+drag and drop photo of paper here
 
 ## Code
 ```.py
