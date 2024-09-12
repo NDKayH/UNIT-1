@@ -31,7 +31,6 @@ My client, the staff and faculty of a boarding school, have various different pa
 ### Test plan
 
 ## Record of Tasks
-
 \begin{table}[]
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
