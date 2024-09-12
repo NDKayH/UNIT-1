@@ -31,12 +31,8 @@ My client, the staff and faculty of a boarding school, have various different pa
 ### Test plan
 
 ## Record of Tasks
-\begin{table}[]
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-Task & Planned Action              & Planned Outcome                                                 & Estimated Time & Target Completion & Criterion \\ \hline
-     & 1st Meeting with the client & Obtained a problem definition, understand what the situation is & 10 min         & Sep 7             & A         \\
-     &                             &                                                                 &                &                   & A         \\
-     &                             &                                                                 &                &                   &          
-\end{tabular}
-\end{table}
+| Task | Planned Action              | Planned Outcome                                                 | Estimated Time | Target Completion | Criterion |
+|------|-----------------------------|-----------------------------------------------------------------|----------------|-------------------|-----------|
+|      | 1st Meeting with the client | Obtained a problem definition, understand what the situation is | 10 min         | Sep 7             | A         |
+|      |                             |                                                                 |                |                   | A         |
+|      |                             |                                                                 |                |                   |           |
