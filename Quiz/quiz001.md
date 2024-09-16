@@ -6,7 +6,13 @@
 
 ## Code
 ```.py
-print('Hello World!')
+word = input("Enter a word: ")
+
+numbers_in_between = 0
+for i in range(1, len(word) - 1):
+    numbers_in_between += 1
+
+print(f"{word} - {word[0]}{numbers_in_between}{word[-1]}")
 ```
 
 
