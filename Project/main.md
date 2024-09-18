@@ -7,7 +7,7 @@ My client, the staff and faculty of a boarding school, have various different pa
 
 ### Proposal Solution
 
-### Success Criteria
+### Success Criteria 
 1. The calculator should accept user input to perform basic operations (addition, subtraction, multiplication, division).
 1. The calculator can handle typical errors (e.g., division by zero) and give appropriate feedback.
 1. If the user enters the secret code ("open123"), the program will change modes and act as a password manager.
