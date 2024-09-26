@@ -3,53 +3,58 @@ import csv
 
 MASTER_CODE = "lockup_92135467"
 
+RED = "\033[91m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+CYAN = "\033[96m"
+RESET = "\033[0m"
+
 def calculator():
     while True:
-        user_input = input("Enter the first number: ").strip()
+        user_input = input(f"{YELLOW}Enter the first number: {RESET}").strip()
 
         if user_input == MASTER_CODE:
-            print("Secret code recognized. Switching...")
+            print(f"{GREEN}Secret code recognized. Switching...{RESET}")
             password_manager()
             break
 
         try:
             num1 = float(user_input)
         except ValueError:
-            print("Invalid input. Please enter a valid number.")
+            print(f"{RED}Invalid input. Please enter a valid number.{RESET}")
             continue
 
-        operation = input("Choose an operation (+, -, *, /): ")
+        operation = input(f"{YELLOW}Choose an operation (+, -, *, /): {RESET}")
 
         try:
-            num2 = float(input("Enter the second number: "))
+            num2 = float(input(f"{YELLOW}Enter the second number: {RESET}"))
         except ValueError:
-            print("Invalid input. Please enter a valid number.")
+            print(f"{RED}Invalid input. Please enter a valid number.{RESET}")
             continue
 
         if operation == '+':
             result = num1 + num2
-            print(f"The result of {num1} + {num2} is: {result}")
+            print(f"{CYAN}The result of {num1} + {num2} is: {result}{RESET}")
         elif operation == '-':
             result = num1 - num2
-            print(f"The result of {num1} - {num2} is: {result}")
+            print(f"{CYAN}The result of {num1} - {num2} is: {result}{RESET}")
         elif operation == '*':
             result = num1 * num2
-            print(f"The result of {num1} * {num2} is: {result}")
+            print(f"{CYAN}The result of {num1} * {num2} is: {result}{RESET}")
         elif operation == '/':
             if num2 != 0:
                 result = num1 / num2
-                print(f"The result of {num1} / {num2} is: {result}")
+                print(f"{CYAN}The result of {num1} / {num2} is: {result}{RESET}")
             else:
-                print("Error: Division by zero is not allowed.")
+                print(f"{RED}Error: Division by zero is not allowed.{RESET}")
         else:
-            print("Invalid operation selected. Please choose +, -, *, or /.")
+            print(f"{RED}Invalid operation selected. Please choose +, -, *, or /.{RESET}")
 
-        repeat = input("Would you like to perform another calculation? (yes/no): ").strip().lower()
+        repeat = input(f"{YELLOW}Would you like to perform another calculation? (yes/no): {RESET}").strip().lower()
 
         if repeat != 'yes':
-            print("Thank you for using the calculator. Goodbye!")
+            print(f"{GREEN}Thank you for using the calculator. Goodbye!{RESET}")
             break
-
 
 def password_manager():
     filename = "passwords.csv"
@@ -63,27 +68,27 @@ def password_manager():
             writer.writerow(["Room", "Password"])
 
     while True:
-        print("\n--- Password Manager ---")
-        print("1. Add a new password")
-        print("2. Delete a password")
-        print("3. View all passwords")
-        print("4. Exit")
+        print(f"\n{CYAN}--- Password Manager ---{RESET}")
+        print(f"{CYAN}1. Add a new password{RESET}")
+        print(f"{CYAN}2. Delete a password{RESET}")
+        print(f"{CYAN}3. View all passwords{RESET}")
+        print(f"{CYAN}4. Exit{RESET}")
 
-        choice = input("Choose an option (1-4): ")
+        choice = input(f"{YELLOW}Choose an option (1-4): {RESET}")
 
         if choice == '1':
-            room = input("Enter the room name/number: ")
-            password = input("Enter the password for this room: ")
+            room = input(f"{YELLOW}Enter the room name/number: {RESET}")
+            password = input(f"{YELLOW}Enter the password for this room: {RESET}")
             encrypted_password = encrypt_password(password)
 
             with open(filename, mode='a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow([room, encrypted_password])
 
-            print(f"Password for room '{room}' added successfully.")
+            print(f"{GREEN}Password for room '{room}' added successfully.{RESET}")
 
         elif choice == '2':
-            room_to_delete = input("Enter the room name/number for the password you want to delete: ")
+            room_to_delete = input(f"{YELLOW}Enter the room name/number for the password you want to delete: {RESET}")
 
             with open(filename, mode='r', newline='') as file:
                 reader = csv.reader(file)
@@ -100,28 +105,27 @@ def password_manager():
                         found = True
 
             if found:
-                print(f"Password for room '{room_to_delete}' deleted successfully.")
+                print(f"{GREEN}Password for room '{room_to_delete}' deleted successfully.{RESET}")
             else:
-                print(f"No password found for room '{room_to_delete}'.")
+                print(f"{RED}No password found for room '{room_to_delete}'.{RESET}")
 
         elif choice == '3':
             with open(filename, mode='r', newline='') as file:
                 reader = csv.reader(file)
-                print("\n--- Stored Room Passwords ---")
+                print(f"\n{CYAN}--- Stored Room Passwords ---{RESET}")
 
                 for index, row in enumerate(reader):
                     if index == 0:
                         continue
                     room, encrypted_password = row
                     decrypted_password = decrypt_password(encrypted_password)
-                    print(f"Room: {room}, Password: {decrypted_password}")
+                    print(f"{CYAN}Room: {room}, Password: {decrypted_password}{RESET}")
 
         elif choice == '4':
-            print("Exiting the password manager.")
+            print(f"{GREEN}Exiting the password manager.{RESET}")
             break
         else:
-           print("Invalid choice. Please select a valid option.")
-
+            print(f"{RED}Invalid choice. Please select a valid option.{RESET}")
 
 def encrypt_password(s):
     chars = "0123456789"
@@ -135,7 +139,6 @@ def encrypt_password(s):
         else:
             encrypted += c
     return encrypted
-
 
 def decrypt_password(s):
     return encrypt_password(s)
