@@ -7,10 +7,6 @@ My client, the staff and faculty of a boarding school, have various different pa
 
 ### Proposal Solution
 
-### **Design Proposal for Secure Password Management System**
-
-#### **Project Overview**
-
 The boarding school staff and faculty have identified a need for a secure, centralized password management solution to safeguard the passwords used to lock various buildings across campus. This project aims to address the recent security breach by providing an encrypted password storage and management system that ensures only authorized personnel can access and use building passwords. This solution will help prevent unauthorized access and mitigate the risk of another data breach, ensuring that complex passwords can be managed efficiently and securely.
 
 #### **Objectives**
@@ -19,6 +15,8 @@ The boarding school staff and faculty have identified a need for a secure, centr
 2. **User-Friendly Management**: Provide an intuitive system for authorized personnel to create, view, and manage passwords without the need to remember them.
 3. **Controlled Access**: Implement a mechanism to ensure only authorized staff can access and update passwords.
 4. **Data Integrity**: Ensure that all password entries are encrypted, preventing potential breaches even if access to the storage file is compromised.
+
+### **Design Proposal for Secure Password Management System**
 
 #### **System Features**
 
@@ -87,11 +85,6 @@ The boarding school staff and faculty have identified a need for a secure, centr
 - Implement a more advanced encryption technique if the school requires an additional layer of security.
 - Introduce a user authentication mechanism for added security, ensuring that only authorized staff can access and modify the password database.
 - Explore integrating the system with a mobile app or web-based interface for easier access.
-
-#### **Conclusion**
-
-This proposed password management system will provide the boarding school with a secure, user-friendly solution to manage complex building passwords. By integrating encryption, secure storage, and controlled access, the system will prevent unauthorized access while simplifying the process for staff responsible for locking up buildings. This solution will effectively mitigate the risk of future breaches and ensure that all building passwords are handled with the highest level of security and efficiency.
-
 
 ### Success Criteria 
 1. The calculator should accept user input to perform basic operations (addition, subtraction, multiplication, division).
