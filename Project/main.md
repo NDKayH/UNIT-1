@@ -23,24 +23,20 @@ This project aims to fix the recent security incident by implementing an encrypt
 
 1. **Password Management Application**: 
    - The main application will serve as a password manager that allows authorized staff to:
-     - **Add** new building passwords.
-     - **Delete** old or outdated passwords.
-     - **View** encrypted passwords securely.
-     - **Modify** existing passwords when changes are needed.
-
+   - **Add** new building passwords.
+   - **Delete** old or outdated passwords.
+   - **View** encrypted passwords securely.
+   - **Modify** existing passwords when changes are needed.
 2. **Encryption and Decryption**: 
    - To guarantee data secrecy, every password will be encrypted using a simple but powerful encryption technique.
    - An ROT13-based encryption method will be used by the system to shift numerical characters, making them incomprehensible to unauthorized users.
    - This encryption makes sure that the passwords stay safe and unreadable even in the event that an unauthorized person gains access to the storage file.
-
 3. **Secure Storage**: 
    - The password database will be a file called `passwords.csv` that contains the passwords.
    - An encrypted password and a building identification (such as a room number) will be included with each entry.
    - While the encryption protects data security, the .csv format makes easy archiving and retrieval possible.
-
 4. **Calculator Integration**: 
    - The system will include a simple calculator interface that staff members can utilize on a regular basis. A concealed "master code" will allow staff members to access the password management interface while keeping unauthorized users out of the system. 
-
 5. **Access Control via Secret Code**: 
    - The password management system is accessed by a distinct master code `lockup_92135467`, which only authorized staff can use to switch from the calculator interface to the password management system.
 
@@ -56,12 +52,10 @@ This project aims to fix the recent security incident by implementing an encrypt
 1. **Daily Operations**:
    - Staff use a basic calculator application interface to access the system on a regular basis.
    - When it comes time to handle building passwords, authorized personnel can access the password manager by entering the secret master code, `lockup_92135467`
-
 2. **Password Management**:
    - **Adding Passwords**: Staff can enter a password and the building's identification. Prior to storing the password, the system encrypts it.
    - **Deleting Passwords**: Employees can remove outdated passwords by providing the building identification when deleting a password.
    - **Viewing Passwords**: When needed, authorized staff members can safely read encrypted passwords by decrypting them within the program.
-
 3. **Data Protection**:
    - The passwords are protected even in the event that this file is viewed without authority thanks to the encrypted password data contained in `passwords.csv`.
    - Sensitive data is protected while it is in transit and at rest thanks to the encryption process.
@@ -72,11 +66,9 @@ This project aims to fix the recent security incident by implementing an encrypt
 1. **Encryption Method**: 
    - Makes use of a modified ROT13 encryption method that shifts numerical characters.
    - Because non-alphabetic characters (such numerals and symbols) don't change, the password difficulty is maintained.
-
 2. **Programming Language**:
    - Python is used for its simplicity and ease of implementation, allowing non-technical staff to interact with the application effortlessly.
-
-4. **Storage File Format**:
+3. **Storage File Format**:
    - .csv is chosen for its readability, simplicity, and ease of access, even if opened outside the application.
 
 
@@ -88,13 +80,13 @@ This project aims to fix the recent security incident by implementing an encrypt
 
 ### Success Criteria 
 1. The calculator should accept user input to perform basic operations (addition, subtraction, multiplication, division).
-1. The calculator can handle typical errors (e.g., division by zero) and give appropriate feedback.
-1. If the user enters the secret code `"open123"`, the program will change modes and act as a password manager.
-1. In password manager mode, the user should be able to perform CRUD operations (Create, Replace, Update, Delete):
+2. The calculator can handle typical errors (e.g., division by zero) and give appropriate feedback.
+3. If the user enters the secret code `"open123"`, the program will change modes and act as a password manager.
+4. In password manager mode, the user should be able to perform CRUD operations (Create, Replace, Update, Delete):
    * Add a password (for example, for a website).
    * View the stored passwords (only if they re-enter the secret code).
-1. Save passwords permanently and securely
-1. Use the terminal to interact with the user.
+5. Save passwords permanently and securely
+6. Use the terminal to interact with the user.
 
 # Criterion B: Design
 ### System Diagram
