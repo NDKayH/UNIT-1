@@ -96,7 +96,8 @@ This project aims to fix the recent security incident by implementing an encrypt
 
 
 ### Flow diagrams for algorithms
-![IMG_8983](https://github.com/user-attachments/assets/a8803437-21eb-4340-a0ba-b3d177363d42)
+![IMG_8984](https://github.com/user-attachments/assets/babf9d2e-4ea4-40b8-bfdd-655c82889b90)
+
 **Fig. 2** This is the flow diagram for the finisehd product
 
 fig 2
