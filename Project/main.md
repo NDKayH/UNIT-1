@@ -54,39 +54,37 @@ This project aims to fix the recent security incident by implementing an encrypt
 #### **Workflow and Usage Scenarios**
 
 1. **Daily Operations**:
-   - Staff access the system through a simple calculator application interface, which they use regularly.
-   - When the time comes to manage building passwords, authorized staff input the secret master code (`lockup_92135467`) to access the password manager.
+   - Staff use a basic calculator application interface to access the system on a regular basis.
+   - When it comes time to handle building passwords, authorized personnel can access the password manager by entering the secret master code, `lockup_92135467`
 
 2. **Password Management**:
-   - **Adding Passwords**: Staff can input the building identifier and a password. The system encrypts the password before storing it.
-   - **Deleting Passwords**: Staff can delete passwords by specifying the building identifier, ensuring obsolete passwords are removed.
-   - **Viewing Passwords**: Encrypted passwords can be decrypted within the application, allowing authorized staff to view them securely when necessary.
+   - **Adding Passwords**: Staff can enter a password and the building's identification. Prior to storing the password, the system encrypts it.
+   - **Deleting Passwords**: Employees can remove outdated passwords by providing the building identification when deleting a password.
+   - **Viewing Passwords**: When needed, authorized staff members can safely read encrypted passwords by decrypting them within the program.
 
 3. **Data Protection**:
-   - The encrypted password data stored in `passwords.csv` ensures that even if this file is accessed without authorization, the passwords remain protected.
-   - The encryption technique ensures that sensitive data is secure both in transit and at rest.
+   - The passwords are protected even in the event that this file is viewed without authority thanks to the encrypted password data contained in `passwords.csv`.
+   - Sensitive data is protected while it is in transit and at rest thanks to the encryption process.
+
 
 #### **Technical Details**
 
 1. **Encryption Method**: 
-   - Utilizes a modified ROT13 encryption technique that shifts alphabetic characters while retaining any uppercase/lowercase structure.
-   - Non-alphabetic characters (e.g., numbers, symbols) remain unchanged, ensuring the password complexity is preserved.
+   - Makes use of a modified ROT13 encryption method that shifts numerical characters.
+   - Because non-alphabetic characters (such numerals and symbols) don't change, the password difficulty is maintained.
 
-2. **Programming Language**: Python is used for its simplicity and ease of implementation, allowing non-technical staff to interact with the application effortlessly.
+2. **Programming Language**:
+   - Python is used for its simplicity and ease of implementation, allowing non-technical staff to interact with the application effortlessly.
 
-3. **Storage File Format**: CSV is chosen for its readability, simplicity, and ease of access, even if opened outside the application.
+4. **Storage File Format**:
+   - .csv is chosen for its readability, simplicity, and ease of access, even if opened outside the application.
+
 
 #### **Benefits**
+   - **Security**: Even in the event that the .csv file is compromised, encrypted storage reduces the possibility of unwanted access.
+   - **Convenience**: Employees just need to know one password to access the entire building, which lowers the possibility of misplacing paper passwords or sharing them insecurely.
+   - **Flexibility**: As needed, the system can be extended or changed to accommodate new features, such password expiration policies or more advanced encryption techniques.
 
-- **Security**: Encrypted storage minimizes the risk of unauthorized access, even if the CSV file is compromised.
-- **Convenience**: Staff have a single point of access for all building passwords, reducing the risk of losing passwords on paper or sharing them in an insecure manner.
-- **Flexibility**: The system can be expanded or modified to support additional features, such as password expiration policies or more sophisticated encryption methods, as needed.
-
-#### **Future Considerations**
-
-- Implement a more advanced encryption technique if the school requires an additional layer of security.
-- Introduce a user authentication mechanism for added security, ensuring that only authorized staff can access and modify the password database.
-- Explore integrating the system with a mobile app or web-based interface for easier access.
 
 ### Success Criteria 
 1. The calculator should accept user input to perform basic operations (addition, subtraction, multiplication, division).
