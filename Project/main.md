@@ -95,8 +95,8 @@ This project aims to fix the recent security incident by implementing an encrypt
 
 
 ### Flow diagrams for algorithms
-![flow](https://github.com/user-attachments/assets/93f4a0fb-66b8-4993-9b3d-b0b47deaeb82)
-**Fig. 1** This is the flow diagram for the algorithm used to search in the data file
+img
+fig 2
 
 ### Data storage
 
