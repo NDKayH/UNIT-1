@@ -1,6 +1,5 @@
 import csv
 
-
 MASTER_CODE = "lockup_92135467"
 
 def calculator():
