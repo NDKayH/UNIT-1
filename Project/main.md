@@ -5,16 +5,17 @@
 ### Problem Definition
 My client, the staff and faculty of a boarding school, have various different padlocks for the buildings across campus which are locked every night at 23:00. These buildings, containing mostly classrooms, were broken into by three students two and a half weeks ago, and after an investigation the school concluded that a data breach had occurred where a password for one of the buildings was shared and students were able to hang out very late at night. The school has opted for several future prevention methods; the first one is to change all the passwords of each and every lock on the school campus to much more complicated ones. However, they realize that because of how difficult these new passwords might be to remember, the people responsible for locking up the buildings might write down passwords on paper, which is quite insecure, and they believe a breach could happen again. To prevent this, the school is also looking for a password storage application that contains a database of all passwords. 
 
-### Proposal Solution
 
-The boarding school staff and faculty have identified a need for a secure, centralized password management solution to safeguard the passwords used to lock various buildings across campus. This project aims to address the recent security breach by providing an encrypted password storage and management system that ensures only authorized personnel can access and use building passwords. This solution will help prevent unauthorized access and mitigate the risk of another data breach, ensuring that complex passwords can be managed efficiently and securely.
+### Proposal Solution
+This project aims to fix the recent security incident by implementing an encrypted password storage and management system that ensures that only authorized faculty and student lockup-crew members can access and use building passwords. This solution will help prevent unauthorized access and reduce the risk of another data breach by ensuring that passwords are managed effectively and securely.
 
 #### **Objectives**
 
-1. **Enhanced Security**: Secure storage of complex building passwords to prevent unauthorized access.
-2. **User-Friendly Management**: Provide an intuitive system for authorized personnel to create, view, and manage passwords without the need to remember them.
-3. **Controlled Access**: Implement a mechanism to ensure only authorized staff can access and update passwords.
-4. **Data Integrity**: Ensure that all password entries are encrypted, preventing potential breaches even if access to the storage file is compromised.
+1. **Enhanced Security**: To avoid unauthorized access, complicated building passwords should be stored securely.
+2. **User-Friendly Management**: Give authorized staff members access to a user-friendly system so they can generate, view, and manage passwords without having to commit them to memory.
+3. **Controlled Access**: Put in place a system that makes that passwords may only be accessed and updated by authorized personnel.
+4. **Data Integrity**: In order to avoid any breaches even in the event that access to the storage file is stolen, make sure that all password entries are encrypted.
+
 
 ### **Design Proposal for Secure Password Management System**
 
@@ -28,27 +29,28 @@ The boarding school staff and faculty have identified a need for a secure, centr
      - **Modify** existing passwords when changes are needed.
 
 2. **Encryption and Decryption**: 
-   - All passwords will be encrypted using a basic yet effective encryption algorithm to ensure data confidentiality.
-   - The system will implement a ROT13-based encryption technique that shifts alphabetic characters, rendering them unreadable to unauthorized users.
-   - This encryption ensures that even if an unauthorized person accesses the storage file, the passwords remain secure and unreadable.
+   - To guarantee data secrecy, every password will be encrypted using a simple but powerful encryption technique.
+   - An ROT13-based encryption method will be used by the system to shift numerical characters, making them incomprehensible to unauthorized users.
+   - This encryption makes sure that the passwords stay safe and unreadable even in the event that an unauthorized person gains access to the storage file.
 
 3. **Secure Storage**: 
-   - Passwords will be stored in a `passwords.csv` file that functions as the password database.
-   - Each entry will consist of a building identifier (e.g., room number) and the encrypted password.
-   - The CSV format ensures easy storage and retrieval, while the encryption ensures data remains secure.
+   - The password database will be a file called `passwords.csv` that contains the passwords.
+   - An encrypted password and a building identification (such as a room number) will be included with each entry.
+   - While the encryption protects data security, the .csv format makes easy archiving and retrieval possible.
 
 4. **Calculator Integration**: 
-   - The system will have a basic calculator interface for routine use by staff, with a secret "master code" that switches to the password management interface, ensuring authorized access to the password manager is hidden from unauthorized users.
+   - The system will include a simple calculator interface that staff members can utilize on a regular basis. A concealed "master code" will allow staff members to access the password management interface while keeping unauthorized users out of the system. 
 
 5. **Access Control via Secret Code**: 
-   - A unique master code (`lockup_92135467`) serves as a gateway to the password management system, allowing only authorized personnel to switch from the calculator interface to the password management system.
+   - The password management system is accessed by a distinct master code `lockup_92135467`, which only authorized staff can use to switch from the calculator interface to the password management system.
+
 
 #### **System Architecture**
+   - **User Interface**: The application utilizes a console or terminal and is text-based. The program is used by staff members using menu-driven instructions.
+   - **Data Storage**: A `passwords.csv` file is used to store passwords, guaranteeing their secure storage and allowing authorized staff to access them when required.
+   - **Encryption Module**: This module manages the encryption logic that transforms plain text passwords into safe, encrypted strings and back again when needed. It does this by handling both encryption and decryption functions.
 
-- **User Interface**: The application interface is text-based and runs on a console or terminal. Staff interact with the application through menu-driven prompts.
-- **Data Storage**: The password storage is handled via a `passwords.csv` file, ensuring that passwords are stored securely and can be accessed by authorized staff when needed.
-- **Encryption Module**: The encryption logic handles both encryption and decryption functions to convert plain text passwords into secure, encrypted strings and back when needed.
-  
+
 #### **Workflow and Usage Scenarios**
 
 1. **Daily Operations**:
