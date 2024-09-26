@@ -91,7 +91,8 @@ This project aims to fix the recent security incident by implementing an encrypt
 # Criterion B: Design
 ### System Diagram
 <img width="904" alt="Screenshot 2024-09-27 at 1 54 58" src="https://github.com/user-attachments/assets/05f35b57-8e73-44b6-8294-f763d36a2de3">
-**Fig. 1** This is the sytem diagram for the application and it's surrounding support and enviroment
+
+####**Fig. 1** This is the sytem diagram for the application and it's surrounding support and enviroment
 
 
 ### Flow diagrams for algorithms
