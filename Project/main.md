@@ -128,6 +128,9 @@ fig 2
 | 13   | Improve the program using the feedback provided                                                                     | Complete adjustments based on the constructive feedback received and ensure that the product is working                                                                                                                                                                                                                                                                                                                                                                                                | 60 mins        | Sep 26            | B         |
 | 14   | Write the record of tasks                                                                                           | to have recorded (on GitHub) the sequence of actions a developer must follow in order to efficiently and quickly complete a project that is comparable in terms of both time and/or idea                                                                                                                                                                                                                                                                                                               | 30 mins        | Sep 26            | B         |
 
+## Video of Functional Product 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/372kUVniwsk/0.jpg)](https://www.youtube.com/watch?v=372kUVniwsk)
+
 ## Citations
 
 ### Work Cited
