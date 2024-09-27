@@ -89,23 +89,38 @@ def password_manager():
 
         elif choice == '2':
             room_to_delete = input(f"{YELLOW}Enter the room name/number for the password you want to delete: {RESET}")
-
             with open(filename, mode='r', newline='') as file:
                 reader = csv.reader(file)
                 rows = list(reader)
 
             found = False
-            with open(filename, mode='w', newline='') as file:
-                writer = csv.writer(file)
-
-                for row in rows:
-                    if row[0] != room_to_delete:
-                        writer.writerow(row)
-                    else:
-                        found = True
+            original_password = None
+            for row in rows:
+                if row[0] == room_to_delete:
+                    found = True
+                    original_password = row[1]  # Encrypted password
 
             if found:
-                print(f"{GREEN}Password for room '{room_to_delete}' deleted successfully.{RESET}")
+                master_code_input = input(f"{YELLOW}Enter the MASTER CODE to confirm deletion: {RESET}")
+                if master_code_input == MASTER_CODE:
+                    entered_password = input(
+                        f"{YELLOW}Re-enter the password for room '{room_to_delete}' to confirm: {RESET}")
+                    encrypted_entered_password = encrypt_password(entered_password)
+
+                    if encrypted_entered_password == original_password:
+                        with open(filename, mode='w', newline='') as file:
+                            writer = csv.writer(file)
+
+                            # Write back all rows except the one to be deleted
+                            for row in rows:
+                                if row[0] != room_to_delete:
+                                    writer.writerow(row)
+
+                        print(f"{GREEN}Password for room '{room_to_delete}' deleted successfully.{RESET}")
+                    else:
+                        print(f"{RED}Password confirmation failed. Deletion aborted.{RESET}")
+                else:
+                    print(f"{RED}Incorrect MASTER CODE. Deletion aborted.{RESET}")
             else:
                 print(f"{RED}No password found for room '{room_to_delete}'.{RESET}")
 
