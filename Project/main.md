@@ -129,7 +129,7 @@ fig 2
 | 14   | Write the record of tasks                                                                                           | to have recorded (on GitHub) the sequence of actions a developer must follow in order to efficiently and quickly complete a project that is comparable in terms of both time and/or idea                                                                                                                                                                                                                                                                                                               | 30 mins        | Sep 26            | B         |
 
 ## Video of Functional Product 
-[![Watch the video](https://img.youtube.com/vi/372kUVniwsk/default.jpg)](https://youtu.be/372kUVniwsk)
+[![Watch the video](https://img.youtube.com/vi/372kUVniwsk/2.jpg(https://youtu.be/372kUVniwsk)
 
 
 ## Citations
