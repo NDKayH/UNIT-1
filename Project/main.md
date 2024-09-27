@@ -131,8 +131,9 @@ fig 2
 ## Citations
 
 ### Work Cited
-“Python Design Patterns.” Python-Patterns.guide, python-patterns.guide/.
 
-DataFlair Team. “Advantages and Disadvantages of Python - How It Is Dominating Programming World - DataFlair.” DataFlair, 2 Jan. 2018, data-flair.training/blogs/advantages-and-disadvantages-of-python/.
+“Python Design Patterns.” Python-Patterns.guide, https://python-patterns.guide/.
+
+DataFlair Team. “Advantages and Disadvantages of Python - How It Is Dominating Programming World - DataFlair.” DataFlair, 2 Jan. 2018, https://data-flair.training/blogs/advantages-and-disadvantages-of-python/.
 
 ‌
